@@ -27,7 +27,10 @@ body {
   
   nav {
 	background-color: #eee;
+	/* Use the flexbox layout */
 	display: flex;
+	/* Align the items to the top of the flex container */
+	align-items: flex-start;
 	justify-content: center;
 	font-size: 18px;
   }
@@ -41,7 +44,7 @@ body {
   }
   
   nav li {
-	margin: 0 10px;
+	margin-right: 10px;
   }
   
   nav a {
@@ -59,12 +62,18 @@ body {
   }
   
   main {
+	/* Use the flexbox layout */
+	display: flex;
+	/* Align the items to the top of the flex container */
+	align-items: flex-start;
+  }
+  main {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	margin: 20px;
+	margin: 20px 0;
   }
-  
+
   section {
 	background-color: rgb(222, 214, 214);
 	font-style: italic;
@@ -72,6 +81,7 @@ body {
 	margin: 20px;
 	padding: 20px;
 	width: 300px;
+	
   }
   section {
 	text-align: center;
@@ -93,9 +103,15 @@ body {
   footer {
 	background-color: rgb(11, 68, 149);
 	color: #ccc;
-	display: flex;
+	 /* Set the position to fixed so it stays at the bottom of the page */
+	 position: fixed;
+	 /* Set the left, right, and bottom values to 0 to anchor the footer to the bottom of the page */
+	 left: 0;
+	 right: 0;
+	 bottom: 0;
 	justify-content: center;
-	padding: 20px;
+	text-align: center;
+	padding: 0;
   }
 
   /* Center the pop-up image */
@@ -111,12 +127,50 @@ body {
 	color: white;
   }
 
-  @media (max-width: 768px) {
-	/* Styles go here */
-	section {
-		float: left;
-		width: 100%;
-	  }
+  /* Position the topics block on the right side of the website */
+#topics {
+  margin-top: 55px;
+  position: absolute;
+  right: 0;
+  top: 60px;
+  }
+  
+  /* Style the topics block */
+  #topics h2 {
+	font-size: 20px;
+	margin: 0;
+	padding: 10px;
+	background-color: lightblue;
+  }
+  #topics ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+  }
+  #topics li {
+	margin: 0;
+	padding: 10px;
+  }
+  #topics a {
+	display: block;
+	color: black;
+	text-decoration: none;
+  }
+  #topics a:hover {
+	background-color: lightgray;
+  }
+  #topics ul ul {
+	display: none;
+  }
+  #topics li:hover > ul {
+	display: block;
+  }
+  
+
+  @media screen and (max-width: 800px) {
+	nav, main {
+	  width: 100%;
+	}
   }
 
   @keyframes fire {

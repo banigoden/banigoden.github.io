@@ -17,14 +17,28 @@ links.forEach(function(link) {
   });
 });
 
+// Get the topics and subtopics
+var topics = document.querySelectorAll("#topics ul li");
+
+// Add a click event listener to each topic
+topics.forEach(function(topic) {
+  topic.addEventListener("click", function() {
+    // Toggle the visibility of the subtopics
+    this.querySelector("ul").classList.toggle("visible");
+  });
+});
+
+
 // Get the "RoadMap" link and the pop-up image
-var link = document.querySelector("nav li a");
+var link = document.querySelector("#popup a");
 var popup = document.getElementById("popup");
 
 // Check if the link element exists
 if (link) {
   // Show the pop-up image when the link is clicked
-  link.addEventListener("click", function() {
+  link.addEventListener("click", function(event) {
+    // Prevent the default action (following the link)
+    event.preventDefault();
     popup.style.display = "block";
   });
 }
