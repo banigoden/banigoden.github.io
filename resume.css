@@ -54,7 +54,8 @@ body {
   }
 
   section:hover {
-	animation: flip 3s ease-in-out;
+	animation: fire 3s infinite;
+  	border-radius: 50%;
   }
   
   main {
@@ -65,12 +66,19 @@ body {
   }
   
   section {
-	background-color: rgb(234, 214, 214);
+	background-color: rgb(222, 214, 214);
 	font-style: italic;
-	border: 1px solid #ddd;
+	border-radius: 60%;
 	margin: 20px;
 	padding: 20px;
 	width: 300px;
+  }
+  section {
+	text-align: center;
+  }
+  
+  section p {
+	font-family: 'Times New Roman';
   }
   
   section h2 {
@@ -90,6 +98,39 @@ body {
 	padding: 20px;
   }
 
+  /* Center the pop-up image */
+#popup img {
+	display: block;
+	margin: 0 auto;
+  }
+  
+  /* Add padding and a background color to the close button */
+  #close-button {
+	padding: 8px 16px;
+	background-color: blue;
+	color: white;
+  }
+
+  @media (max-width: 768px) {
+	/* Styles go here */
+	section {
+		float: left;
+		width: 100%;
+	  }
+  }
+
+  @keyframes fire {
+	0% {
+	  box-shadow: 0 0 20px yellow;
+	}
+	50% {
+	  box-shadow: 0 0 30px orange;
+	}
+	100% {
+	  box-shadow: 0 0 40px red;
+	}
+  }
+
   @keyframes fadeIn {
 	0% {
 		opacity: 1;
@@ -102,14 +143,6 @@ body {
 	  }
   }
 
-  @keyframes flip {
-	from {
-	  transform: rotateY(0deg);
-	}
-	to {
-	  transform: rotateY(360deg);
-	}
-  }
 
   @keyframes blink {
 	50% {
