@@ -5,26 +5,34 @@
   <script src="main.js"></script>
 </head>
 <body>
-  <header>
-    <h1>Denis Bandurin</h1>
-    <h2>Backend Java</h2>
-  </header>
+  <div id="header-container">
+    <header>
+      <h1>Denis Bandurin</h1>
+    </header>
+  </div>
   <nav>
     <ul>
-      <li><a href="index.html">Main</a></li>
       <li><a href="about.html">About Me</a></li>
       <li><a href="experience.html">Experience</a></li>
       <li><a href="skills.html">Skills</a></li>
-      <li><a href="#">RoadMap</a></li>
-      <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
-  <div id="popup" style="display: none;">
-    <!-- Add the link to the image -->
-    <a href="roadmap.jpeg" target="_blank">
-      <img src="roadmap.jpeg" alt="RoadMap">
-    </a>
-    <button id="close-button">Close</button>
+  <div id="photo-container">
+    <img src="myphoto.png" id="profile-picture" alt="Your Profile Picture">
+    <h1>Denis Bandurin</h1>
+    <h2>Java Developer</h2>
+    <div id="social-media-container">
+      <a href="https://www.linkedin.com/in/denis-bandurin-52251b114/"> <img class="social-media-icon" src="linkedIn.png" alt="LinkedIn"></a>
+      <a href="https://github.com/banigoden"> <img class="social-media-icon" src="github.png" alt="GitHub"></a>
+      <a href="https://www.facebook.com/denis.bandurin.33"> <img class="social-media-icon" src="facebook.jpeg" alt="Facebook"></a>
+      <a href="mailto:denisbandurin@gmail.com"> <img class="social-media-icon" src="gmail.png" alt="Email"></a>
+   </div>
+  </div>
+  <div class="about-me">
+      <p> Hey!</p>
+      <p>I'm Denis Bandurin from Germany!</p>
+      <p>I love programming, as well as running, taking photos and learning new things!</p>
+      <p>Feel free to get in touch or take a look at my past work below.</p>
   </div>
   <main>
     <section id="about">
@@ -56,37 +64,6 @@
       <li><a href="https://www.linkedin.com/in/denis-bandurin-52251b114/">LinkedIn</a></li>
     </section>
   </main>
-  <!-- The topics block -->
-<div id="topics">
-  <h2>Interesting Topics</h2>
-  <ul>
-    <!-- Add the topics and subtopics -->
-    <li>
-      <a href="#">Topic 1</a>
-      <ul>
-        <li><a href="#">Subtopic 1</a></li>
-        <li><a href="#">Subtopic 2</a></li>
-        <li><a href="#">Subtopic 3</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#">Topic 2</a>
-      <ul>
-        <li><a href="#">Subtopic 1</a></li>
-        <li><a href="#">Subtopic 2</a></li>
-        <li><a href="#">Subtopic 3</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#">Topic 3</a>
-      <ul>
-        <li><a href="#">Subtopic 1</a></li>
-        <li><a href="#">Subtopic 2</a></li>
-        <li><a href="#">Subtopic 3</a></li>
-      </ul>
-    </li>
-  </ul>
-</div>
   <footer>
     <p>Copyright 2023</p>
   </footer>
