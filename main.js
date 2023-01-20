@@ -17,38 +17,19 @@ links.forEach(function(link) {
   });
 });
 
-// Get the topics and subtopics
-var topics = document.querySelectorAll("#topics ul li");
+$(document).on("scroll", function() {
+  var pageTop = $(document).scrollTop();
+  var pageBottom = pageTop + $(window).height();
+  var tags = $(".tag");
 
-// Add a click event listener to each topic
-topics.forEach(function(topic) {
-  topic.addEventListener("click", function() {
-    // Toggle the visibility of the subtopics
-    this.querySelector("ul").classList.toggle("visible");
-  });
+  for (var i = 0; i < tags.length; i++) {
+    var tag = tags[i];
+
+    if ($(tag).position().top < pageBottom) {
+      $(tag).addClass("visible");
+    } else {
+      $(tag).removeClass("visible");
+    }
+  }
 });
 
-
-// Get the "RoadMap" link and the pop-up image
-var link = document.querySelector("#popup a");
-var popup = document.getElementById("popup");
-
-// Check if the link element exists
-if (link) {
-  // Show the pop-up image when the link is clicked
-  link.addEventListener("click", function(event) {
-    // Prevent the default action (following the link)
-    event.preventDefault();
-    popup.style.display = "block";
-  });
-}
-
-// Get the close button
-var closeButton = document.getElementById("close-button");
-
-if (closeButton) {
-// Hide the pop-up image when the close button is clicked
-closeButton.addEventListener("click", function() {
-  popup.style.display = "none";
-});
-}

@@ -74,51 +74,57 @@ body {
   nav li a:hover {
 	animation: blink 3s linear infinite;
   }
-
-  section:hover {
-	animation: fire 3s infinite;
-  	border-radius: 50%;
+  .fade-in {
+	opacity: 0;
+	transition: opacity 1s ease-in;
   }
   
-  main {
-	/* Use the flexbox layout */
-	display: flex;
-	/* Align the items to the top of the flex container */
-	align-items: flex-start;
-  }
-  main {
-	background-color: black;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	margin: 20px 0;
-  }
-
-  section {
-	background-color: rgb(222, 214, 214);
-	font-style: italic;
-	border-radius: 60%;
-	margin: 20px;
-	padding: 20px;
-	width: 300px;
-	
-  }
-  section {
+  .fade-in.visible {
+	opacity: 1;
+  }  
+  
+  body {
 	text-align: center;
   }
-  
-  section p {
-	font-family: 'Times New Roman';
+  h2 {
+	margin: 0;
+	padding: 0;
+  }
+  h2 {
+	color: white;
+	font-size: 3rem;
+	text-align: center;
+  }
+  section {
+	height: 100vh;
+  }
+  .tag {
   }
   
-  section h2 {
-	margin: 0 0 10px;
+  .tag {
+	opacity: 0;
+	transform: translate(0, 10vh);
+	transition: all 1s;
   }
   
-  section h3 {
-	color: #666;
-	margin: 10px 0;
+  .tag.visible {
+	opacity: 1;
+	transform: translate(0, 0);
+  }  
+
+.about {
+	background-color: lightyellow;
   }
+  .experience {
+	background-color: lightcoral;
+  }
+  .education {
+	background-color: lightblue;
+  }
+  .skills {
+	background-color: lightgreen;
+  }
+  
   
   footer {
 	background-color: rgb(10, 14, 18);
@@ -146,36 +152,7 @@ body {
 	margin:7px;
 }
 
-  @media screen and (max-width: 800px) {
-	nav, main {
-	  width: 100%;
-	}
-  }
-
-  @keyframes fire {
-	0% {
-	  box-shadow: 0 0 20px yellow;
-	}
-	50% {
-	  box-shadow: 0 0 30px orange;
-	}
-	100% {
-	  box-shadow: 0 0 40px red;
-	}
-  }
-
-  @keyframes fadeIn {
-	0% {
-		opacity: 1;
-	  }
-	  50% {
-		opacity: 0;
-	  }
-	  100% {
-		opacity: 1;
-	  }
-  }
-
+ 
 
   @keyframes blink {
 	50% {
