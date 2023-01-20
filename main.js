@@ -17,19 +17,31 @@ links.forEach(function(link) {
   });
 });
 
+
 $(document).on("scroll", function() {
   var pageTop = $(document).scrollTop();
-  var pageBottom = pageTop + $(window).height();
   var tags = $(".tag");
 
   for (var i = 0; i < tags.length; i++) {
     var tag = tags[i];
 
-    if ($(tag).position().top < pageBottom) {
+    if ($(tag).offset().top < pageTop + $(window).height()) {
       $(tag).addClass("visible");
     } else {
       $(tag).removeClass("visible");
     }
   }
 });
+
+$(document).on('click', 'nav a', function(e){
+  e.preventDefault();
+  var sectionId = $(this).attr("href");
+  $("html, body").animate({
+      scrollTop: $(sectionId).offset().top
+  }, 1000);
+});
+
+
+
+
 

@@ -74,18 +74,7 @@ body {
   nav li a:hover {
 	animation: blink 3s linear infinite;
   }
-  .fade-in {
-	opacity: 0;
-	transition: opacity 1s ease-in;
-  }
   
-  .fade-in.visible {
-	opacity: 1;
-  }  
-  
-  body {
-	text-align: center;
-  }
   h2 {
 	margin: 0;
 	padding: 0;
@@ -98,12 +87,10 @@ body {
   section {
 	height: 100vh;
   }
-  .tag {
-  }
-  
+
   .tag {
 	opacity: 0;
-	transform: translate(0, 10vh);
+	transform: translate(0, 100vh);
 	transition: all 1s;
   }
   
@@ -112,16 +99,16 @@ body {
 	transform: translate(0, 0);
   }  
 
-.about {
+#about {
 	background-color: lightyellow;
   }
-  .experience {
+  #experience {
 	background-color: lightcoral;
   }
-  .education {
+  #education {
 	background-color: lightblue;
   }
-  .skills {
+  #skills {
 	background-color: lightgreen;
   }
   
