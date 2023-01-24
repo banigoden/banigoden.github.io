@@ -26,7 +26,7 @@ body {
 	margin: 0 auto;
 	background-color:  rgb(0, 0, 0);
 	color: #ccc;
-	font-size: 22px;
+	font-size: 35px;
   }
   
   #photo-container img {
@@ -74,7 +74,7 @@ body {
   nav li a:hover {
 	animation: blink 3s linear infinite;
   }
-  
+
   h2 {
 	margin: 0;
 	padding: 0;
@@ -99,19 +99,92 @@ body {
 	transform: translate(0, 0);
   }  
 
-#about {
-	background-color: lightyellow;
-  }
-  #experience {
-	background-color: lightcoral;
-  }
-  #education {
-	background-color: lightblue;
-  }
-  #skills {
-	background-color: lightgreen;
+  #about {
+	background-color: rgb(0, 0, 0);
+	padding: 2em;
+  } 
+  .about h2 {
+	color: rgb(255, 255, 255); 
+	text-align: center; /* center align the heading */
   }
   
+  .about p {
+	color: rgb(255, 255, 255);
+	line-height: 1.5; /* increase line height for readability */
+	font-size: 1.2rem; /* increase font size for readability */
+	text-align: justify; 
+  }
+  
+  #experience {
+	background-color: rgb(0, 0, 0);
+	font-style:oblique;
+	color: rgb(255, 255, 255);
+  }
+  #education {
+	background-color: rgb(0, 0, 0);
+	color: rgb(255, 255, 255);
+  }  
+  .education h2 {
+	color: #ffffff;
+	text-align: center;
+  }
+  
+  .education .entry-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin: 0 auto;
+	max-width: 1200px;
+  }
+  
+  .education .entry {
+	flex: 1;
+	margin: 20px;
+	text-align: center;
+  }
+  
+  .education h3 {
+	font-size: 1.5rem;
+	margin-bottom: 10px;
+  }
+  
+  .education img {
+	width: 200px;
+	margin: 20px auto;
+	display: block;
+  }
+
+  #skills {
+	background-color: rgb(0, 0, 0);
+	color: rgb(255, 255, 255);
+  }
+
+.skills h2 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.skill {
+  background-color: #ddd;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin: 10px;
+  font-size: 1.2em;
+  font-weight: 600;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+  transition: 0.3s ease-in-out;
+}
+
+.skill:hover {
+  transform: scale(1.05);
+  box-shadow: 2px 2px 20px rgba(0,0,0,0.5);
+}
   
   footer {
 	background-color: rgb(10, 14, 18);
@@ -133,13 +206,43 @@ body {
 }
 
 .social-media-icon {
-	max-width: 17px;
-  	max-height: 17px;
+	max-width: 30px;
+  	max-height: 30px;
 	padding: 7px;
 	margin:7px;
+} 
+
+.entry-container {
+    display: flex;
+    justify-content: space-between;
 }
 
- 
+.entry {
+    width: 45%;
+    padding: 1em;
+    box-sizing: border-box;
+}
+
+.entry h3 {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+.entry p {
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+}
+
+.entry ul {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding-left: 2em;
+}
+
+.entry li {
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+}
 
   @keyframes blink {
 	50% {

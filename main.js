@@ -17,7 +17,6 @@ links.forEach(function(link) {
   });
 });
 
-
 $(document).on("scroll", function() {
   var pageTop = $(document).scrollTop();
   var tags = $(".tag");
@@ -40,8 +39,4 @@ $(document).on('click', 'nav a', function(e){
       scrollTop: $(sectionId).offset().top
   }, 1000);
 });
-
-
-
-
 
