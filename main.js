@@ -39,4 +39,3 @@ $(document).on('click', 'nav a', function(e){
       scrollTop: $(sectionId).offset().top
   }, 1000);
 });
-
